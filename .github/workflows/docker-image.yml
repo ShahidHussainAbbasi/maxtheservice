@@ -15,9 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker images 
-      working-directory: demo/Dockerfile
-      run: docker compose build
+      working-directory: .
+      run: docker compose up --build
 
-    - name: Run the docker compose
-      working-directory: /demo-ui/Dockerfile
-      run: docker compose up -d
+    # - name: Run the docker compose
+    #   working-directory: /demo-ui/Dockerfile
+    #   run: docker compose up -d
