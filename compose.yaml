@@ -20,7 +20,7 @@ services:
     container_name: core_container
     image: demo:v1.0
     build:
-      context: .
+      # context: .
       dockerfile: demo/Dockerfile
     ports:
       - "8080:8080"
