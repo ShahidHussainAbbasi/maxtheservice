@@ -20,8 +20,8 @@ services:
     container_name: core_container
     image: demo:v1.0
     build:
-      context: ./demo
-      dockerfile: /Dockerfile
+      context: .
+      dockerfile: demo/Dockerfile
     ports:
       - "8080:8080"
     depends_on:
@@ -35,8 +35,8 @@ services:
     container_name: ui_container
     image: demo-ui:v1.0
     build:
-      context: ./demo-ui
-      dockerfile: /Dockerfile
+      context: .
+      dockerfile: demo-ui/Dockerfile
     ports:
       - "4200:4200"
     depends_on:
