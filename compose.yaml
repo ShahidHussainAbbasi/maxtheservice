@@ -18,10 +18,10 @@ services:
       
   core:
     container_name: core_container
-    image: demo:v1.0
+    image: maxtheservice/demo:latest
     build:
-      # context: .
-      dockerfile: demo/Dockerfile
+      context: demo/
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     depends_on:
@@ -33,10 +33,10 @@ services:
 
   ui:
     container_name: ui_container
-    image: demo-ui:v1.0
+    image: maxtheservice/demo_ui:latest
     build:
-      context: .
-      dockerfile: demo-ui/Dockerfile
+      context: demo-ui/
+      dockerfile: Dockerfile
     ports:
       - "4200:4200"
     depends_on:
