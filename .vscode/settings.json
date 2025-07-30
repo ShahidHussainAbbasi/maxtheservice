@@ -1,5 +1,8 @@
 {
     "java.compile.nullAnalysis.mode": "automatic",
     "java.configuration.updateBuildConfiguration": "automatic",
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "spring.initializr.defaultLanguage": "Java",
+    "spring-boot.ls.problem.boot3.JAVA_TYPE_NOT_SUPPORTED": "INFO",
+    "maven.terminal.useJavaHome": true
 }
