@@ -2,6 +2,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ProductServiceApplication",
+            "request": "launch",
+            "mainClass": "maxtheservice.devops.product_service.ProductServiceApplication",
+            "projectName": "product-service"
+        },
+        {
+            "type": "java",
+            "name": "OrderServiceApplication",
+            "request": "launch",
+            "mainClass": "maxtheservice.devops.order_service.OrderServiceApplication",
+            "projectName": "order-service"
+        },
+        {
+            "type": "java",
+            "name": "InventoryServiceApplication",
+            "request": "launch",
+            "mainClass": "maxtheservice.devops.inventory_service.InventoryServiceApplication",
+            "projectName": "inventory-service"
+        },
+        {
+            "type": "java",
+            "name": "AuthServiceApplication",
+            "request": "launch",
+            "mainClass": "maxtheservice.devops.auth_service.AuthServiceApplication",
+            "projectName": "auth-service"
+        },
+        {
+            "type": "java",
+            "name": "UserServiceApplication",
+            "request": "launch",
+            "mainClass": "maxtheservice.devops.user_service.UserServiceApplication",
+            "projectName": "user-service"
+        },
+        {
+            "type": "java",
+            "name": "ConfigServiceApplication",
+            "request": "launch",
+            "mainClass": "maxtheservice.devops.config_service.ConfigServiceApplication",
+            "projectName": "config-service"
+        },
+        {
+            "type": "java",
+            "name": "RegistryApplication",
+            "request": "launch",
+            "mainClass": "maxtheservice.devops.registry.RegistryApplication",
+            "projectName": "registry"
+        },
+        {
+            "type": "java",
             "name": "DemoApplication",
             "request": "launch",
             "mainClass": "maxtheservice.devops.demo.DemoApplication",
