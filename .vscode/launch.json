@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AuthServiceApplication",
+            "request": "launch",
+            "mainClass": "maxtheservice.devops.authservice.AuthServiceApplication",
+            "projectName": "auth-service"
+        },
+        {
+            "type": "java",
             "name": "ProductServiceApplication",
             "request": "launch",
             "mainClass": "maxtheservice.devops.product_service.ProductServiceApplication",
@@ -23,16 +30,9 @@
         },
         {
             "type": "java",
-            "name": "AuthServiceApplication",
-            "request": "launch",
-            "mainClass": "maxtheservice.devops.auth_service.AuthServiceApplication",
-            "projectName": "auth-service"
-        },
-        {
-            "type": "java",
             "name": "UserServiceApplication",
             "request": "launch",
-            "mainClass": "maxtheservice.devops.user_service.UserServiceApplication",
+            "mainClass": "maxtheservice.devops.userservice.UserServiceApplication",
             "projectName": "user-service"
         },
         {

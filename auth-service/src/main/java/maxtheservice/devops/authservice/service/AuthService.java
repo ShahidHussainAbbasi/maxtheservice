@@ -1,0 +1,36 @@
+package maxtheservice.devops.authservice.service;
+
+import maxtheservice.devops.authservice.client.UserServiceClient;
+import maxtheservice.devops.authservice.dto.RegisterDto;
+import maxtheservice.devops.authservice.dto.TokenDto;
+import maxtheservice.devops.authservice.exc.WrongCredentialsException;
+import maxtheservice.devops.authservice.request.LoginRequest;
+import maxtheservice.devops.authservice.request.RegisterRequest;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class AuthService {
+    private final AuthenticationManager authenticationManager;
+    private final UserServiceClient userServiceClient;
+    private final JwtService jwtService;
+
+    public TokenDto login(LoginRequest request) {
+        Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword()));
+        if (authenticate.isAuthenticated())
+            return TokenDto
+                    .builder()
+                    .token(jwtService.generateToken(request.getUsername()))
+                    .build();
+        else throw new WrongCredentialsException("Wrong credentials");
+    }
+
+    public RegisterDto register(RegisterRequest request) {
+        RegisterDto registerDto =  userServiceClient.save(request).getBody();
+        return registerDto;
+    }
+}
